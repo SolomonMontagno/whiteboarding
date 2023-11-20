@@ -27,13 +27,14 @@ console.log('test4', FindPalindrome('tort'))
 
 //Linear Search
 //Input is the array you want to search and the target of the search
-function linearSearch(arr, target) {
 
-  
-    //loop through the array and stop looping when you reached end of the array
-    //conditional statement to check if the value of a given index is equal to the target
-     // Found the target at index i
-      //if it is return the index of the target
+const linearSearch = (array, target) => {
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === target) {
+            return i
+        }
     }
+    return -1
+}
 
-; // Target not found
+console.log('palindrome', linearSearch([1,3,4,5,6,7,8,9,10,10, 11], 10 ))

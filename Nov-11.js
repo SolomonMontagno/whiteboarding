@@ -68,3 +68,49 @@ for(let i = 0; i < array.length; i++){
     return -1
 }
 console.log("palindrome@@@@@", linearSearchPractice([1, 3, 4, 5, 6, 7, 8, 9, 10], 6));
+
+
+const binarySearchPractice = (array, target) => {
+    let left = 0
+    let right = array.length - 1
+
+    while (left <= right) {
+        mid = Math.floor((left + right) / 2 )
+
+        if(array[mid] === target){
+            return mid
+        } else if(array[mid] < target) {
+            left = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+    return -1 
+}
+
+
+console.log("binary:#", binarySearchPractice([1,2,3,5,6,7], 3))
+
+const linearSearch2 = (array, target) => {
+    for (let i = 0; i < array.length; i++){
+        if(array[i] === target){
+            return i
+        }
+    }
+    return -1 
+}
+console.log("linear :D", linearSearch2([1, 2, 3, 5, 6, 7], 6));
+
+
+ const palindrome = (word) => {
+    for(let i = 0, j = word.length - 1; i < j; i++, j--){
+        if(word[i] !== word[j]){
+            return false
+        }
+    }
+    return true
+ }
+console.log('testy', palindrome('toot'))
+console.log("testy2", palindrome("tooter"));
+console.log("testy", palindrome("tort"));
+console.log("testy", palindrome("racecar"));

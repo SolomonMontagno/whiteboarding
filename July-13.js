@@ -29,3 +29,20 @@ const f = (a, b) => {
 console.log("test 1", f('hi', 'hello') === "hihellohi")
 console.log("test 2", f('', 'a') === 'a')
 console.log("test 3", f('hello', 'hi') === 'hihellohi')
+
+
+function plusMinus(arr) {
+    let negative = []
+    let positive = []
+    let zero = []
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > 0){
+            positive.push(arr[i])
+            return console.log(positive.length / arr.length)
+        }
+
+    } else if(arr[i] === 0) {
+        zero.push(arr[i])
+    }
+    return console.log(zero.length / arr.length)
+}

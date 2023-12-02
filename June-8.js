@@ -9,3 +9,16 @@ const double = (array) => {
     })
     return arrayTwo
 }
+
+const doubles = (array) => {
+    let doubleHolder = []
+
+    for(let i = 0; i < array.length; i++) {
+        doubleHolder.push(array[i] * 2)
+    }
+
+    return doubleHolder
+}
+
+console.log(doubles(arrayOne))
+

@@ -13,3 +13,15 @@ const oddNumbers = () =>{
     return arrayTwo
 }
 
+const oddNumbers2 = () => {
+    let holders = []
+
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] % 2 !== 0){
+            holders.push(array[i])
+        }
+    }
+    return holders
+}
+
+console.log(oddNumbers2(array))

@@ -15,3 +15,20 @@ const longestWord = (string) => {
     });
     return word
 }
+
+
+const longestWords = (string) => {
+    let str = string.split(" ")
+    let longest = 0
+    let word = ""
+
+    str.forEach((currentWord) => {
+        if(currentWord.length > longest){
+            longest = currentWord.length
+            word = currentWord
+        }
+    })
+    return word
+}
+
+console.log(longestWords(string))

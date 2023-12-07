@@ -13,3 +13,15 @@ const f = (array) => {
 
 console.log("test even", f([2, 4, 6]) === true)
 console.log("test odd", f([1,4,6]) === false)
+
+const isEven = (array) => {
+    for(let i = 0; i < array.length; i++){
+        if(array[i] % 2 !==0) {
+            return false
+        }
+    }
+    return true
+}
+
+console.log('test isEven', isEven([1,3,4,5]))
+console.log('test isEVEn 2', isEven([2, 4, 6]))

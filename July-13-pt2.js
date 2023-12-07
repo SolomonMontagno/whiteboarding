@@ -23,3 +23,16 @@ console.log("someOdd", f([1, 4, 5]) === false ? "passing" : "failing")
 console.log("allEven", f([2, 4, 6]) === true ? "passing" : "failing")
 console.log("allEven", f([2, 3]) === false ? "passing" : "failing")
 console.log("noNumb", f([]) === true ? "passing" : "failing")
+
+
+const trueOrFalse = (array) => {
+    
+    for(let i = 0; i < array.length; i++) {
+        if(array[i] % 2 !== 0){
+            return false
+        } 
+    }
+    return true 
+}
+
+console.log(trueOrFalse([2,4,7]))

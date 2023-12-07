@@ -9,3 +9,18 @@ const sortNumbers = (numbers) => {
   }
   return sortedNumbers;
 };
+
+
+
+const sortNumb = (numbers) => {
+  let sortedNumbers = [];
+
+  while (numbers.length > 0) {
+    const min = Math.min(...numbers)
+    sortedNumbers.push(min)
+    numbers.splice(numbers.indexOf(min), 1)
+  }
+  return sortedNumbers;
+}
+
+console.log(sortNumb(unsortedNumbers));

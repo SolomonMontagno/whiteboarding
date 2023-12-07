@@ -18,3 +18,11 @@ console.log("test", f("word") === "wrd")
 console.log("test2", f("a") === "")
 console.log("test3", f("why") === "wh")
 console.log("test", f("moat") === "mt")
+
+
+const noVowels = (word) => {
+    return word.toLowerCase().replace(/[aeiouy]/gi, '')
+
+}
+
+console.log("test", noVowels('word') === 'word')

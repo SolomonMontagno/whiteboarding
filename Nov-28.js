@@ -59,3 +59,44 @@ const returnHash = (string) => {
     return store
 }
 console.log(returnHash(string))
+
+
+const moreThanOncePt2 = (array) => {
+    let elementCount = {}
+    let repeatedElement = []
+
+    for(let i = 0; i < array.length; i++){
+        let element = array[i]
+        if(elementCount[element]) {
+            elementCount[element] ++
+        } else {
+            elementCount[element] = 1
+        }
+    }
+
+    for(let element in elementCount){
+        if(elementCount[element] > 1){
+            repeatedElement.push(element)
+        }
+    }
+    return repeatedElement
+}
+
+console.log('counting', moreThanOncePt2([1,3,4,4,5,5,7]))
+
+
+const createHash = (string) => {
+  let store = {}
+
+  for(let i = 0; i < string.length; i++) {
+    if(store[string[i]]) {
+        store[string[i]].push(i)
+    } else {
+        store[string[i]] = [i]
+    }
+  }
+  return store
+}
+
+console.log('createHash', createHash('burgers'))
+

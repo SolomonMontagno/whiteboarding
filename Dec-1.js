@@ -26,24 +26,39 @@ console.log(removeDuplicates('tree traversal'))
 //only the characters found in both strings
 
 const twoStrings = (string1, string2) => {
-    let result = ''
-    
-    
+  let result = ''
 
-    for (let i = 0; i <string1.length; i++ ){
-        let currentChar = string1[i]
+  for(let i = 0; i < string1.length; i++) {
+    let currentChar = string1[i]
+  
 
-        for(let j = 0; j < string2.length; j++){
-            let currentChar2 = string2[j]
-
-            if(currentChar === currentChar2 && result.indexOf(currentChar) === -1){
-            result += currentChar
-        }
-        }
-
-        
-    }
-    return result
+  for(let j = 0; j < string2.length; j++) {
+    let currentChar2 = string2[j]
+  
+  
+  if(currentChar === currentChar2 && result.indexOf(currentChar) === -1) {
+    result += currentChar
+  }
+}
+  }
+  return result
 }
 
 console.log(twoStrings('trees', 'bees'))
+
+
+const searchDups = (string) => {
+   let result = ''
+   let dupMap = {}
+
+   for( let i = 0; i < string.length; i++){
+    let currentElement = string[i]
+    if(!dupMap[currentElement]) {
+        result += currentElement
+        dupMap[currentElement] = true
+    }
+   }
+   return result
+}
+
+console.log('searchDups', searchDups('tree traversal'))

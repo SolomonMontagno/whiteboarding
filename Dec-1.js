@@ -62,3 +62,10 @@ const searchDups = (string) => {
 }
 
 console.log('searchDups', searchDups('tree traversal'))
+
+
+const multiply = (n1, n2) => {
+    let result = ()
+
+    return result
+}

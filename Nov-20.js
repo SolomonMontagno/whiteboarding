@@ -51,3 +51,24 @@ const binSearch = (array, target) => {
     return -1
 }
 console.log("binSearch", binSearch([1, 2, 4, 5, 6, 7, 8], 7));
+
+
+const fact = (n) => {
+  if(n === 0 || n === 1) {
+
+    return 1
+  } else {
+    return n * fact(n - 1)
+  }
+}
+
+console.log('fact', fact(5))
+
+const fib = (n) => {
+  let fib = [0, 1]
+
+  for (let i = 2; i < n; i++){
+    fib[i] = fib[i - 1] + fib[i - 2]
+  }
+  return fib
+}

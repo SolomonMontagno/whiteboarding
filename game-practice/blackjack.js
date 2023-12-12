@@ -88,6 +88,7 @@ function checkBlackjack(playerScore, dealerScore) {
   }
 }
 
+
 // Define a function to end the game
 function endGame(playerCards, dealerCards, playerScore, dealerScore) {
   // Print the final cards and scores for both the player and dealer
